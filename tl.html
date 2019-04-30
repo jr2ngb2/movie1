@@ -1,0 +1,30 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js">
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.min.js"></script>
+<script>
+<html>
+<div ng-app = "tq">
+<div ng-model = "qw" ng-controller = "lr">
+<div class = "row">
+<div role = "checkbox" class = "col-md-2" ng-repeat = "w in kt">{{w}}</div>
+
+
+
+
+
+</div>
+</div>
+<script>
+var lq = angular.module("tq",[]);
+lq.controller("lr",function($scope,$http){
+
+$scope.kt = ["1A","2A","3A","4A","5A","6A","1B","2B","3B","4B","5B","6B"]
+
+
+
+});
+</script>

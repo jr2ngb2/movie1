@@ -1,0 +1,412 @@
+<!---<link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<script>
+.body{background-color:"black";}
+.navbar-default{background-color:"red";}
+</script>
+<nav class = "navbar navbar-inverse" style="background-color:black; font-family:times;">
+<div class = "container-fluid">
+<div class = "navbar-header">
+<a class = "navbar-brand" href = "#" style = "color:white;"><span style = "  border-style:solid;border-width:5px;border-color:red;"><span class = "glyphicon glyphicon-home"></span>
+HOME</span></a>
+<div class = "navbar-nav">
+<h3 style="color:white;" align:up>El</h3>
+</div>
+</nav>	
+</div>
+<div class = "collapse navbar-collapse" id = "bs-example-navbar-collapse-1">
+<div class = "carousel slide">
+<div class = "carousel-inner" role="listbox">
+<div class = "carousel-item-active">
+<img class = "d-block img-fluid">
+</div>
+<div class = "carousel-item" src = "">
+<img class = "d-block img-fluid">
+</div>
+<img class = "d-block img-fluid">
+</div>
+<div style = "height:400px ; width:250px ; border : 6px solid  black;position:relative;display:inline-block;margin:20 40 100 550 ; background-color:#f45c41">
+<p>User</p><input type = "text" id = "yq" class = "text-primary" style="border: 2px solid  black; background-color: yellow" max:20 onmouseenter = "col(this)" onmousehover="val()"></input>	
+</div>
+<script>
+function col(x){
+
+x.style = "background-color:white";
+}
+function val(){
+
+var t = document.getElementById("yq").value();
+alert("Cor");	
+}	
+
+</script>---->
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   <style>
+  .container {
+      padding: 80px 120px;
+  }
+  .person {
+      border: 4px solid black;
+      }
+  .carousel-inner img {
+
+     width: 100%; /* Set width to 100% */
+      margin: auto;
+  }
+.carousel-caption h3 {
+      color: #fff !important;
+  }
+    .background	g-1 {
+      background: #2d2d30;
+      color: #bdbdbd;
+  }
+  .bg-1 h3 {color: #fff;}
+  .bg-1 p {font-style: italic;}
+  .list-group-item:first-child {
+      border-top-right-radius: 0;
+      border-top-left-radius: 0;
+  }
+  .list-group-item:last-child {
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+  }
+  .thumbnail {
+      padding: 0 0 15px 0;
+      border: none;
+      border-radius: 0;
+  }
+  .thumbnail p {
+      margin-top: 15px;
+      color: #555;
+  }
+  .btn {
+      padding: 10px 20px;
+      background-color: #333;
+      color: #f1f1f1;
+      border-radius: 0;
+      transition: .2s;
+  }
+  .btn:hover, .btn:focus {
+      border: 1px solid #333;
+      background-color: #fff;
+      color: #000;
+  }
+  .modal-header, h4, .close {
+      background-color: #333;
+      color: #fff !important;
+      text-align: center;
+      font-size: 30px;
+  }
+  .modal-header, .modal-body {
+      padding: 40px 50px;
+  }
+  .nav-tabs li a {
+      color: #777;
+  }
+    .navbar {
+      margin-bottom: 0;
+      background-color: #2d2d30;
+      border: 0;
+      font-size: 11px !important;
+      letter-spacing: 4px;
+      opacity: 0.9;
+  }
+  .navbar li a, .navbar .navbar-brand { 
+      color: #d5d5d5 !important;
+  }
+  .navbar-nav li a:hover {
+      color: #fff !important;
+  }
+  .navbar-nav li.active a {
+      color: #fff !important;
+      background-color: #29292c !important;
+  }
+  .navbar-default .navbar-toggle {
+      border-color: transparent;
+  }
+  .open .dropdown-toggle {
+      color: #fff;
+      background-color: #555 !important;
+  }
+.dropdown-menu li a {
+      color: #000 !important;
+  }
+  .dropdown-menu li a:hover {
+      background-color: red !important;
+  }
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">Logo</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#myPage">HOME</a></li>
+        <li><a href="#Movies">MOVIES</a></li>
+        <li><a href="#offers">OFFERS</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Critics</a></li>
+            <li><a href="#">User Reviews</a></li>
+            <li><a href="#">News</a></li> 
+          </ul>
+        </li>
+        <li><a href="#"><input type = "text" style = "width:0px;border:2px solid black; " id="dt" placeholder="Search">
+<span class="glyphicon glyphicon-search" id="search"></span></a></li>
+      
+      </ul>
+    </div>
+  </div>
+</nav>
+<script>
+$(document).ready(function(){
+
+$("#search").click(function(){
+
+$("#dt").animate({width:'150px'});
+
+});
+});
+</script>
+
+
+<div id="Movcarousel" class="carousel slide" data-ride="carousel">
+    
+    <ol class="carousel-indicators">
+      <li data-target="#Movcarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#Movcarousel" data-slide-to="1"></li>
+      <li data-target="#Movcarousel" data-slide-to="2"></li>
+    </ol>
+
+     <div class = "carousel-inner " role="listbox">
+      <div class="item active ">
+        <img src="http://rummuser.com/wp-content/uploads/airlift.jpg" width="2px" style="height:95%">
+        <div class="carousel-caption">
+          <h3>Airlift</h3>
+         </div>      
+      </div>
+
+      <div class="item">
+        <img src="https://i.ytimg.com/vi/mcq-JXEsDpo/maxresdefault.jpg" alt="Chicago" width="1200" height="700" style="height:100%">
+        <div class="carousel-caption">
+        </div>      
+      </div>
+    
+      <div class="item">
+        <img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/9e081727685123.56369171b80b1.jpg" alt="Los Angeles" width="1200" height="700" style="height:95%">
+        <div class="carousel-caption">
+        </div>      
+      </div>
+    </div>
+        <a class="left carousel-control" href="#Movcarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#Movcarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+</div>
+<div ng-app = 'tj'>
+<div ng-model = 'kq' ng-controller = 'dy'>
+<h2  id = "tw" class = "container-fluid text-center">Welcome {{us1 | uppercase}}</h2>
+</div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js">
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.min.js"></script>
+<script>
+var wr = angular.module('tj',['ngRoute']);
+wr.controller('dy',function($scope,$http){
+
+$http.get('/name').then(function(response){
+$scope.us1 = response.data;
+})
+
+});
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js">
+</script>
+<!-- Container (Upcoming Movies) -->
+<div id="Movies" class="container-fluid text-center" style="margin:auto;overflow:auto;"">
+  <h3><b>TRENDING MOVIES</b></h3>
+  <br>
+  <div class="row">
+    <div class="col-sm-4" style="margin:auto;overflow:auto">
+      <a href = "/login"><img src="https://upload.wikimedia.org/wikipedia/en/d/d4/Rogue_One%2C_A_Star_Wars_Story_poster.png" class=" person" style="display:block;" height="500" width="400" alt="Random Name"></a>
+      </div>
+      
+    <div class="col-sm-4" style="margin:auto;">
+        <a href = "/login"><img src="https://is3-ssl.mzstatic.com/image/thumb/Music49/v4/20/dc/61/20dc617f-0b25-aa74-1d5a-7556e7eb229d/cover.jpg/1200x630bb.jpg" class="person" alt="Random Name" width="400" height="500" style="display:block"></a>
+     
+      </div>
+    <div class="col-sm-4" style="margin:auto;">
+        <a href = "/login"><img src="https://upload.wikimedia.org/wikipedia/en/e/e1/Rocky_Handsome_Hindi_poster.jpg" class="person" alt="Random Name" width="400" height="500" style = "display:block"></a>
+      
+       </div>
+  </div>
+</div>
+
+<!-- Container (OFFERS Section) -->
+<style>
+.glyphicon.glyphicon-gift{font-size:200px;}	
+.material-icons{font-size:200px;}
+</style>
+  <div class="container-fluid bg-1" id = "offers" style="background-color:#eaeaea;margin-top:40px;">
+    <h2 class="text-center">OFFERS</h2>
+    <div class = "row container" style="padding-left:200;padding-right:0">
+    <a href="#"><div class= "col-sm-6 text-center" style="border:10px solid #c02c39;margin:auto;display:block;overflow:hidden;height:400;width:400">
+    <p style="font-size:40px;color:#c02c39;font-family:monospace;">GIFTS</p>
+    <span class = "glyphicon glyphicon-gift"></span>
+    <p style="margin-top:50px;font-family:monospace;"><strong><b>With MyShow cards, you can gift your friends & family movie & play tickets, concert passes.</b></strong></p>
+      
+    </div></a>
+    <a href="#"><div class= "col-sm-6 text-center" style="border:10px solid #c02c39;margin:auto;
+    display:block;overflow:hidden;height:400;width:400;float:right">
+    <p style="font-size:40px;color:#c02c39;font-family:monospace;">OFFERS</p>
+    <i class = "material-icons">local_offer</i>
+
+    <p style="margin-top:10px;font-family:monospace;"><strong>Delight yourself with crazy offers while you book your tickets. Whether its cashback, freebies or discounts you're after, there's a can't-miss bargain for every single one of you.</strong></p>
+    </div></a>
+    
+    </div>
+      
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">×</button>
+          <h4><span class="glyphicon glyphicon-lock"></span> Tickets</h4>
+        </div>
+        <div class="modal-body">
+          <form role="form">
+            <div class="form-group">
+              <label for="psw"><span class="glyphicon glyphicon-shopping-cart"></span> Tickets, $23 per person</label>
+              <input type="number" class="form-control" id="psw" placeholder="How many?">
+            </div>
+            <div class="form-group">
+              <label for="usrname"><span class="glyphicon glyphicon-user"></span> Send To</label>
+              <input type="text" class="form-control" id="usrname" placeholder="Enter email">
+            </div>
+              <button type="submit" class="btn btn-block">Pay 
+                <span class="glyphicon glyphicon-ok"></span>
+              </button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal">
+            <span class="glyphicon glyphicon-remove"></span> Cancel
+          </button>
+          <p>Need <a href="#">help?</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Container (Contact Section) -->
+<div id="contact" class="container">
+  <h3>Contact</h3>
+  
+  <div class="row">
+    <div class="col-md-4" style="padding-top: 40px">
+      <p><span class="glyphicon glyphicon-map-marker"></span>New Delhi,INDIA</p>
+      <p><span class="glyphicon glyphicon-phone"></span>Phone: +91 9426200000</p>
+      <p><span class="glyphicon glyphicon-envelope"></span>Email: bkms@gmail.com</p>
+    </div>
+    <div class="col-md-8">
+      <div class="row">
+        <form name="lp" novalidate>
+        <div class="col-sm-6">
+          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="email" name="kp" placeholder="Email" type="email" required>
+        </div>
+      </div>
+      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea>
+      <div class = "row">
+      <div class = "col-md-12 form-group" style = "margin-top:10px" >
+      <input class = "form-control" id="kd" type = "text"  placeholder="Mobile"></input>
+      </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-md-12 form-group">
+          <button class="btn pull-right" type="submit" onclick="valform()">Send</button>
+        </form>
+        <script>
+        function valform()
+        {
+         var x = document.getElementById("email").value;
+         var po = x.indexOf("@");
+         var pl = x.indexOf(".");
+        if(po<1||pl<po+2||pl+2>=x.length)
+         {
+
+         alert("Not valid e-mail address");
+         
+         }
+        var y = document.getElementById("kd").value;
+        if(y>=1000000000 && y<=9999999999)
+        {
+         return(true);
+        }
+        else
+        {
+         alert("Invalid Mobile Number");
+        }
+        }
+        </script>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+<!---<div style="border:10px solid black">
+<div class = "lq" style="text-align: center;display:none"><img src="https://i.ytimg.com/vi/33rYQDSuDXQ/maxresdefault.jpg" class = "img-fluid" ></div>
+<div class = "lq" style="text-align: center"><img src="https://i.ytimg.com/vi/Zp0xkIjeLrk/maxresdefault.jpg" alt="Los Angeles" width="1200"  >
+        </div>
+
+<div style="float:right;"><span class = "glyphicon glyphicon-glass" id = "wr" onclick="next()"></span></div>
+</div>
+<script> 
+var in1 = -1;
+function next()
+{
+
+in1 = in1+1;
+shdiv(in1);
+}
+function shdiv(m)
+{
+var i;
+var x = document.getElementsByClassName("lq");
+for(i=0;i<x.length;i++)
+{
+x[i].style.display="none";	
+}
+x[m].style.display="block";
+}
+</script>-->
+</body>
+</html>

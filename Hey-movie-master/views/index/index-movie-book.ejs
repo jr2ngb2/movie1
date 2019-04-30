@@ -1,0 +1,95 @@
+<script>
+	$(document).ready(function(){
+
+
+
+		var $cart = $('#selected-seats'),
+			$counter = $('#counter'),
+			sc = $('#seat-map').seatCharts({
+			map: [
+				'_____ee_eeeeeeeeeeee_ee_____',
+				'____eee_eeeeeeeeeeee_eee____',
+				'___eeee_eeeeeeeeeeee_eeee___',
+				'__eeeee_eeeeeeeeeeee_eeeee__',
+				'_eeeeee_eeeeeeeeeeee_eeeeee_',
+				'eeeeeee_eeeeeeeeeeee_eeeeeee',
+				'eeeeeee_eeeeeeeeeeee_eeeeeee',
+				'eeeeeee_eeeeeeeeeeee_eeeeeee',
+				'eeeeeee_eeeeeeeeeeee_eeeeeee',
+				'eeeeeee_eeeeeeeeeeee_eeeeeee',
+				'eeeeeee_eeeeeeeeeeee_eeeeeee',
+				'eeeeeee_eeeeeeeeeeee_eeeeeee',
+				'eeeeeee_eeeeeeeeeeee_eeeeeee',
+
+				
+			],
+			click: function () {
+				if (this.status() == 'available') {
+					//let's create a new <li> which we'll add to the cart items
+					$('<li>'+' Seat # '+ this.settings.id + '</li>')
+						.attr('id', 'cart-item-'+this.settings.id)
+						.data('seatId', this.settings.id)
+						.appendTo($cart);
+					
+					$('#seat').val($('#seat').val() + this.settings.id + ',');
+					/*
+					 * Lets update the counter and total
+					 *
+					 * .find function will not find the current seat, because it will change its stauts only after return
+					 * 'selected'. This is why we have to add 1 to the length and the current seat price to the total.
+					 */
+					$counter.text(sc.find('selected').length+1);
+					return 'selected';
+				} else if (this.status() == 'selected') {
+					//update the counter
+					$counter.text(sc.find('selected').length-1);
+				
+					//remove the item from our cart
+					$('#cart-item-'+this.settings.id).remove();
+				
+					//seat has been vacated
+					return 'available';
+				} else if (this.status() == 'unavailable') {
+					//seat has been already booked
+					return 'unavailable';
+				} else {
+					return this.style();
+				}
+			}
+		});
+
+ 		$(document).on('change','#show_select',function(){
+            $.post('/ajax/get_selected_seat', {'show_id':$('#show_select').val()}, function(data) {
+				sc.get(JSON.parse(data)).status('unavailable');	
+			});
+        });
+
+	}); 
+</script>
+
+<div class="content book-movie" style="display : none">
+	<h2 class="content-head is-center" style="margin-top: 5%; margin-bottom: 5%">Book Ticket</h2>
+	<form action="/movie/book" method="post" class="pure-form pure-form-single" style="margin-top: 5%;">
+		<input id="bmovie" disabled="disabled" name="movie" type="text" placeholder="Movie Title" />
+		<input id="bmovie_id" type="hidden" name="movie_id" />
+		<input type="hidden" name="user_id" value = "<%=user.customer_id%>" />
+		<input id="seat" name="seat" type="text" placeholder="Seat" />
+		<div id="shows-option"></div>
+		<br /><br /><br />
+		<button type="submit" class="pure-button pure-button-primary" style="margin-bottom: 10%">Buy now</button>
+	</form>
+	<div class="wrapper">
+		<div class="container">
+			<div id="seat-map" style="text-align:center; margin-left: 7%;">
+				<div class="front-indicator" style="text-align:center; width:92%">Screen</div>
+				
+			</div>
+			<div class="booking-details" style="display:none">
+				<h2>Booking Details</h2>
+				
+				<h3> Selected Seats (<span id="counter">0</span>):</h3>
+				<ul id="selected-seats"></ul>
+			</div>
+		</div>
+	</div>
+</div>

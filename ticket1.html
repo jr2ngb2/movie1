@@ -1,0 +1,48 @@
+<html>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+L <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js">
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.min.js"></script>
+
+<div ng-app = "wq">
+<div ng-controller = "tr" ng-model = "wt">
+<div class="card container" style="width: 20rem;" >
+<div class="card-block">
+    <h2 class="card-title">{{lw}}</h2>
+    </div>
+  <ul class="list-group list-group-flush">
+    <h2><li class="list-group-item">USER:{{tw.user}}</h2></li>
+    <h2><li class="list-group-item">TIME:{{tw.time}}</h2></li>
+    <h2><li class="list-group-item">MOVIE:{{tw.movie}}</h2></li>
+  </ul>
+  <div class="card-block">
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  	<a href ="/logout">LOGOUT</a>
+  </div>
+</div>
+</div>
+</div>
+</div>
+<script>
+var lz = angular.module("wq",["ngRoute"]);
+lz.controller("tr",function($scope,$http){
+
+$http.get('/tkb4').then(function(response){
+
+$scope.tw = response.data;
+});
+
+});
+
+
+
+
+
+</script>

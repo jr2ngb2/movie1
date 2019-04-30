@@ -1,0 +1,36 @@
+  <div class="content edit-profile" style="display : none; margin-top:10%; margin-bottom:20%">
+    <form action="/profile/edit" method="POST" class="pure-form pure-form-single" id="profile-edit">
+      <fieldset>
+        <div class="profile-edit-display">
+         <br></br>
+         <p class="profile-form-header">Hey <%= user.name + '!!!' %></p>
+         <% 
+         if ((user.contact === undefined) || (user.contact === null) || (user.contact.length === 0)) { 
+          %><input class="profile-edit-input" name="contact" type="text" placeholder="User Contact"><% 
+        } else {
+          %><input class="profile-edit-input" name="contact" type="text" placeholder="<%=user.contact%>" value="<%=user.contact%>"><%
+        }%>
+         <script>
+            $(function() {          
+              $("#datepicker").datetimepicker({timepicker: false, format: 'Y-m-d', yearRange: "-100:+0"});
+            });
+          </script>
+        <% 
+        if (user.DOB === null) { 
+          %>
+          <input name="dob" type="text" id="datepicker" placeholder="User Birthday">
+          <%
+        } else { 
+          var t = user.DOB.split(/[- :]/);
+                var k = t[2].split(/[T]/);
+                var d = t[0] + "-" + t[1] + "-" + k[0];
+                %> 
+          <input name="dob" type="text" id="datepicker" placeholder=<%=d%>><%
+        } %>
+        <input name="email" type="hidden" value=<%=user.email%>>
+      </div><br></br>
+      
+      <button type="submit" class="pure-button pure-button-primary">Edit Profile</a></button>
+      
+    </fieldset>
+  </form>

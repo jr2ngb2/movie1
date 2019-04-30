@@ -1,0 +1,51 @@
+<script>
+	$(document).ready(function(){
+		$.post('/ajax/get_selected_movie', {'movie_id':$(this).attr('id')}, function(data) {
+		});
+	}); 
+</script>
+<div class="content show-management" style="display : none">
+	<h2 class="content-head is-center" style="margin-top: 5%; margin-bottom: 5%">Add Show</h2>
+	<form action="/admin/movie/add_show" method="post" class="pure-form pure-form-single" style="margin-top: 5%;">
+		<input id="movie" disabled="disabled" name="movie" type="text" placeholder="Movie Title" />
+		<input id="movie_id" type="hidden" name="movie_id" />
+		<select name="subtitle" style="height: 36px;width: 100%; margin-bottom: 1em;">
+			<option value="">Select Subtitle Language</option>
+			<option value="Arabic">Arabic</option>
+			<option value="Chinese">Chinese</option>
+			<option value="Danish">Danish</option>
+			<option value="Dutch">Dutch</option>
+			<option value="English">English</option>
+			<option value="French">French</option>
+			<option value="German">German</option>
+			<option value="Greek">Greek</option>
+			<option value="Hindi">Hindi</option>
+			<option value="Indonesian">Indonesian</option>
+			<option value="Italian">Italian</option>
+			<option value="Japanese">Japanese</option>
+			<option value="Korean">Korean</option>
+			<option value="Latin">Latin</option>
+			<option value="Malay">Malay</option>
+			<option value="Polish">Polish</option>
+			<option value="Russian">Russian</option>
+			<option value="Thai">Thai</option>
+		</select>
+		<select name="theatre_id" style="height: 36px; width: 100%; margin-bottom: 1em;">
+			<option value="">Select Theatre</option>
+			<%for (var i = 0; i < all_theatre.length; i ++) {
+			%><option value=<%= all_theatre[i].theatre_id %>><%= all_theatre[i].name%></option>
+			<% } %>
+		</select>
+		<input name="start_time" type="text" id="form_datetime_from" placeholder="Start Time">
+		<input name="end_time" type="text" id="form_datetime_to" placeholder="End Time">
+		<br /><br /><br />
+		<button type="submit" class="pure-button pure-button-primary" style="margin-bottom: 10%">Add Show</button>
+		<script>
+		$(function() {
+            $('#form_datetime_from').datetimepicker({format: 'Y-m-d H:i:s',});
+            $('#form_datetime_to').datetimepicker({format: 'Y-m-d H:i:s',});
+        });
+
+		</script>
+	</form>
+</div>

@@ -1,0 +1,48 @@
+<html>
+<canvas id  = "wq" width = "400" height = "100">
+</canvas>
+
+<nav>
+<div class = "nav navbar" style = "background-color : blue">Home</navbar>
+</nav>
+<input type = "text" id = "tw" onkeyup = "kw()"></input>
+<p id = "tj"></p>
+<input type = "text" id = "kq" onkeyup = "kw()"></input>
+<p id = "wj"></p>
+<script>
+var tq = document.getElementById("wq");
+var tw = tq.getContext('2d');
+tw.fillStyle = "blue";
+tw.strokeStyle = "yellow";
+tw.strokeRect(0,0,20,50);
+tw.beginPath();
+tw.moveTo(0,0);
+tw.lineTo(20,50);
+tw.stroke()
+function kw()
+{
+var tq = document.getElementById("tw").value;
+var tw = tq.indexOf('@');
+
+var jq = tq.indexOf('.');
+if(tw <= -1 || jq <= -1 || jq-tw < 2)
+{
+document.getElementById("tj").innerHTML = "kw";
+} 
+else
+{
+document.getElementById("tj").innerHTML = "kq"; 	
+}
+
+var qw = document.getElementById("kq").value;
+var wr = /^0-9{2}A-Z{2,*}$/;
+if(wr.test(qw))
+{
+document.getElementById("wj").innerHTML = "wt";	
+}
+else
+{
+document.getElementById("wj").innerHTML = "wq";	
+}
+}
+</script>

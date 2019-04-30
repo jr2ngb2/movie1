@@ -1,0 +1,290 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/core.js">
+</script>
+<style>
+.container {
+      padding: 80px 120px;
+  }
+  .person {
+      border: 10px solid transparent;
+      margin-bottom: 25px;
+      width: 80%;
+      height: 80%;
+      opacity: 0.7;
+  }
+  .person:hover {
+      border-color: #f1f1f1;
+  }
+  .carousel-inner img {
+
+     width: 100%; /* Set width to 100% */
+      margin: auto;
+  }
+.carousel-caption h3 {
+      color: #fff !important;
+  }
+    .background	g-1 {
+      background: #2d2d30;
+      color: #bdbdbd;
+  }
+  .bg-1 h3 {color: #fff;}
+  .bg-1 p {font-style: italic;}
+  .list-group-item:first-child {
+      border-top-right-radius: 0;
+      border-top-left-radius: 0;
+  }
+  .list-group-item:last-child {
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+  }
+  .thumbnail {
+      padding: 0 0 15px 0;
+      border: none;
+      border-radius: 0;
+  }
+  .thumbnail p {
+      margin-top: 15px;
+      color: #555;
+  }
+  .btn {
+      padding: 10px 20px;
+      background-color: #333;
+      color: #f1f1f1;
+      border-radius: 0;
+      transition: .2s;
+  }
+  .btn:hover, .btn:focus {
+      border: 1px solid #333;
+      background-color: #fff;
+      color: #000;
+  }
+  .modal-header, h4, .close {
+      background-color: #333;
+      color: #fff !important;
+      text-align: center;
+      font-size: 30px;
+  }
+  .modal-header, .modal-body {
+      padding: 40px 50px;
+  }
+  .nav-tabs li a {
+      color: #777;
+  }
+  
+li,a{
+padding:14px 16px;
+text-align:center;
+font-family:monsterrat	;
+color:;
+letter-spacing: 4px;
+}
+li:hover{color:white;}
+.dropdown-toggle{color:#eaeaea !important;}
+.dropdown-menu li:hover{background-color:red;}
+</style>
+<nav class = "navbar navbar-inverse" style="height:10px;">
+<div class = "container-fluid">
+<ul style= "color:#eaeaea; " class = "nav navbar-nav navbar-right">
+
+<li>HOME</li>
+<li>BAND</li>
+<li>TOUR</li>
+<li>CONTACT</li>
+<li class="dropdown" style="padding:0"><a class = "dropdown-toggle" href="#" data-toggle="dropdown">MORE
+<span class = "caret"></span></a> 
+<ul class = "dropdown-menu" style="color:black;">
+<li>k 1 </li>
+<li>k 2</li>
+<li>k 3</li>
+</ul>
+</li>
+<li>
+<input type = "text" style = "width:0px;border:2px solid black; " id="dt" placeholder="Search">
+<span class = "glyphicon glyphicon-search" id="search"></input></span>
+</li>
+</div>
+
+
+<script>
+$(document).ready(function(){
+
+$("#search").click(function(){
+
+$("#dt").animate({width:'150px'});
+
+});
+});
+</script>
+<!---<div style="border:10px solid black">
+<div class = "lq" style="text-align: center;display:none"><img src="https://i.ytimg.com/vi/33rYQDSuDXQ/maxresdefault.jpg" class = "img-fluid" ></div>
+<div class = "lq" style="text-align: center"><img src="https://i.ytimg.com/vi/Zp0xkIjeLrk/maxresdefault.jpg" alt="Los Angeles" width="1200"  >
+        </div>
+
+<div style="float:right;"><span class = "glyphicon glyphicon-glass" id = "wr" onclick="next()"></span></div>
+</div>
+<script> 
+var in1 = -1;
+function next()
+{
+
+in1 = in1+1;
+shdiv(in1);
+}
+function shdiv(m)
+{
+var i;
+var x = document.getElementsByClassName("lq");
+for(i=0;i<x.length;i++)
+{
+x[i].style.display="none";	
+}
+x[m].style.display="block";
+}
+</script>-->
+<!--<style>
+.carousel-inner img{width:100%;margin:auto;}	
+</style>
+ 
+ <div id="yl" class="carousel slide" style="height:" data-ride="carousel">
+    
+    <ol class="carousel-indicators">
+      <li data-target="#yl" data-slide-to="0" class="active"></li>
+      <li data-target="#yl" data-slide-to="1"></li>
+      <li data-target="#yl" data-slide-to="2"></li>
+    </ol>
+
+<div class = "carousel slide" id = "yl" data-ride="carousel">
+<div class = "carousel-inner container-fluid">
+<div class = "item active"> <img src="https://i.ytimg.com/vi/33rYQDSuDXQ/maxresdefault.jpg" width="2px" ></div>
+<div class = "item"><img src="http://cdn3.thr.com/sites/default/files/2016/01/the_jungle_book_poster_key_art.jpg" alt="Chicago" width="1200" height="700">
+        </div>
+<div class = "item">kl</div>
+<div class = "item">lq</div>
+</div>
+<a class = "left carousel-control" href="#yl" data-slide = "prev">
+<span class = "glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+</a>
+<a class = "right carousel-control" href="#yl" data-slide = "next">
+<span class = "glyphicon glyphicon-chevron-right" aria-hidden = "true"></span>
+</a>
+
+<!---<ul class="list-group">
+      <li class="list-group-item">September <span class="label label-danger">Sold Out!</span></li>
+      <li class="list-group-item">October <span class="label label-danger">Sold Out!</span></li> 
+      <li class="list-group-item">November <span class="badge">3</span></li> 
+    </ul>
+    </div>
+    <div class="row text-center">
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="paris.jpg" alt="Paris" width="400" height="300">
+          <p><strong>Paris</strong></p>
+          <p>Friday 27 November 2015</p>
+          <button class="btn" data-toggle="modal" data-target="#myModal">Buy Tickets</button>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="newyork.jpg" alt="New York" width="400" height="300">
+          <p><strong>New York</strong></p>
+          <p>Saturday 28 November 2015</p>
+          <button class="btn" data-toggle="modal" data-target="#myModal">Buy Tickets</button>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div cflass="thumbnail">
+          <img src="sanfran.jpg" alt="San Francisco" width="400" height="300">
+          <p><strong>San Francisco</strong></p>
+          <p>Sunday 29 November 2015</p>
+          <button class="btn" data-toggle="modal" data-target="#myModal">Buy Tickets</button>
+        </div>
+      </div>
+    </div>
+  </div>
+<!--<br>
+  <h3 class="text-center">From The Blog</h3>  
+  <ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#home">Mike</a></li>
+    <li><a data-toggle="tab" href="#menu1">Chandler</a></li>
+    <li><a data-toggle="tab" href="#menu2">Peter</a></li>
+  </ul>
+
+  <div class="tab-content">
+    <div id="home" class="tab-pane fade in active">
+      <h2>Mike Ross, Manager</h2>
+      <p>Man, we've been on the road for some time now. Looking forward to lorem ipsum.</p>
+    </div>
+    <div id="menu1" class="tab-pane fade">
+      <h2>Chandler Bing, Guitarist</h2>
+      <p>Always a pleasure people! Hope you enjoyed it as much as I did. Could I BE.. any more pleased?</p>
+    </div>
+    <div id="menu2" class="tab-pane fade">
+      <h2>Peter Griffin, Bass player</h2>
+      <p>I mean, sometimes I enjoy the show, but other times I enjoy other things.</p>
+    </div>
+  </div>
+</div>-->
+<h2 id = "tk">JAMES</h2>
+<input type = "text" id = "kw"></input>
+<script>
+$("document").ready(function(){
+
+$("#kw").keyup(function(){
+
+$("#tk").text($("#kw").val() + 'JAMES');
+});
+
+
+
+});
+</script>
+
+<form action = "/q1" method = "POST">
+<input type = "text" name = "t1">
+<input type = "text" name = "q1">
+<button type = "submit">SUBMIT</button>
+</form>
+
+<script>
+function loadFlickr(flickrid)
+{
+    // Display a loading icon in our display element
+    $('#feed').html('<span><img src="/blog/images/lightbox-ico-loading.gif" alt=""></span>');
+ 
+    // Request the JSON and process it
+    $.ajax({
+        type:'GET',
+        url:"http://api.flickr.com/services/feeds/photos_public.gne",
+        data:"id="+flickrid+"&lang=en-us&format=json&jsoncallback=?",
+        success:function(feed) {
+            // Create an empty array to store images
+            var thumbs = [];
+ 
+            // Loop through the items
+            for(var i=0, l=feed.items.length; i < l && i < 16;   i) 
+            {
+                // Manipulate the image to get thumb and medium sizes
+                var img = feed.items[i].media.m.replace(
+                    /^(.*?)_m.jpg$/, 
+                    '<a href="/blog/$1.jpg"><img src="/blog/$1_s.jpg" alt=""></a>'
+                );
+ 
+                // Add the new element to the array
+                thumbs.push(img);
+            }
+ 
+            // Display the thumbnails on the page
+            $('#feed').html(thumbs.join(''));
+ 
+            // A function to add a lightbox effect
+            addLB();
+        },
+        dataType:'jsonp'
+    });
+}
+</script>
+<div>
+loadFlickr("29080075@N02");
+</div>

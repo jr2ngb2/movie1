@@ -1,0 +1,90 @@
+<link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js">
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.min.js"></script>
+ <div ng-app = "kr">
+  <div ng-model = "kq" ng-controller = "lq">
+  <hr class="">
+  <div class="">
+  <div class="row ">
+<div ng-repeat = "t in movw">
+  <div class="col-md-4">
+            <div class="thumbnail">
+                <img src="{{t.poster}}" class="" >
+                <div class="caption">
+                     <form method="post" action = "/mvbook">
+                     <input type = "hidden" name = "Movie" value = "{{t.title}}"></input><h4 class="" >{{t.title}}</h4>
+
+                    <h4>{{t.genre}}</h4> <a href="#" class="btn btn-default btn-xs pull-right" role="button"><i class="glyphicon glyphicon-edit"></i></a> <input class="btn btn-default btn-xs btn-warning btn-lg" type = "submit" role= "button" value = "BOOK"></form>
+
+                </div>
+            </div>
+        
+        
+  </div>
+  </div>
+  </div>
+  </div>
+  <script>
+  var aprw = angular.module("kr",[]);
+   aprw.controller("lq",function($scope,$http){
+
+    $http.get('/mov').then(function(response){
+
+     $scope.movw = response.data; 
+    });
+
+   });
+
+
+
+
+  </script>
+
+    <!--/row-->
+</div>
+<!--/container -->
+<script>
+angular.module('ui.filters').filter('unique', function () {
+
+  return function (items, filterOn) {
+
+    if (filterOn === false) {
+      return items;
+    }
+
+    if ((filterOn || angular.isUndefined(filterOn)) && angular.isArray(items)) {
+      var hashCheck = {}, newItems = [];
+
+      var extractValueToCompare = function (item) {
+        if (angular.isObject(item) && angular.isString(filterOn)) {
+          return item[filterOn];
+        } else {
+          return item;
+        }
+      };
+
+      angular.forEach(items, function (item) {
+        var valueToCheck, isDuplicate = false;
+
+        for (var i = 0; i < newItems.length; i++) {
+          if (angular.equals(extractValueToCompare(newItems[i]), extractValueToCompare(item))) {
+            isDuplicate = true;
+            break;
+          }
+        }
+        if (!isDuplicate) {
+          newItems.push(item);
+        }
+
+      });
+      items = newItems;
+    }
+    return items;
+  };
+});
+
+</script>

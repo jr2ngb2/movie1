@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.w3-sidebar a {font-family: "Roboto", sans-serif}
+body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
+#mainselection {
+   overflow:hidden;
+   width:350px;
+   -moz-border-radius: 9px 9px 9px 9px;
+   -webkit-border-radius: 9px 9px 9px 9px;
+   border-radius: 9px 9px 9px 9px;
+   box-shadow: 1px 1px 11px #330033;
+   background: white url("http://i62.tinypic.com/15xvbd5.png") no-repeat scroll 319px center;
+}
+#mainselection select {
+   border: 0;
+   color:#000000;
+   background: transparent;
+   font-size: 20px;
+   font-weight: bold;
+   padding: 2px 10px;
+   width: 378px;
+   *width: 350px;
+   *background: white;
+   -webkit-appearance: none;
+}
+
+</style>
+
+<body class="w3-content" style="max-width:1200px">
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top" style="z-index:3;width:250px" id="mySidebar">
+  <div class="w3-container w3-display-container w3-padding-16">
+    <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
+   
+  </div>
+  <div class="w3-padding-64 w3-large" style="font-weight:bold;color:red">
+    <a href="database.html" class="w3-bar-item w3-button">NOW SHOWING</a>
+    <a href="book tickets.html" class="w3-bar-item w3-button">BOOK</a>
+    </div>
+	</nav>
+<!-- Top menu on small screens -->
+<header class="w3-bar w3-top w3-hide-large w3-black w3-xlarge">
+  <div class="w3-bar-item w3-padding-24 w3-wide">LOGO</div>
+  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-24 w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:250px">
+
+  <!-- Push down content on small screens -->
+  <div class="w3-hide-large" style="margin-top:83px"></div>
+  
+  <!-- Top header -->
+  <header class="w3-container w3-xlarge">
+    <p class="w3-left w3-block w3-black w3-container"  style = "color:firebrick">BOOKING</p>
+    <p class="w3-left">&nbsp;</p>
+    <p class="w3-right">
+      <i class="fa fa-search"></i>
+    </p>
+  </header>
+ <form name = "wq" action = "/tickq" method = "post">
+ <table border="0">
+<tr c>
+	<td><p> MOVIE NAME</p></td>
+<td>
+ <div id="mainselection"><select name="movie">
+  <option value="Airlift" name = "Airlift">Airlift</option>
+  <option value="Starwars" name = "Starwars">Starwars</option>
+  <option value="Thegidi" name = "Thegidi">Thegidi</option>
+  <option value="Bahubali" name = "Bahubali">Bahubali</option>
+  <option value="La La Land" name = "La La Land">La La Land</option>
+  <option value="Moonlight" name = "Moonlight">Moon light</option>
+  <option value="Dead Pool" name = "Dead Pool">Dead Pool</option>
+  <option value="Civil war" name = "Civil war">Civil war</option>
+</select>
+	</div>
+	</td>
+	</tr>
+	<tr>
+	<td><p> Date </p></td>
+		<td>
+		<div id="mainselection">
+	<select name="date">
+	<option value="10-NOV-2017">10 NOV</option>
+    <option value="11-NOV-2017">11 NOV</option>
+    <option value="12-NOV-2017">12 NOV</option>
+	</select>
+	</div>
+		</td>
+	</tr>
+	<tr>
+		<td><p> Choose the Seat</p></td>
+		<td>
+	<div id="mainselection">
+  <select name="Row">
+  <option value="A">A</option>
+  <option value="B">B</option>
+  <option value="C">C</option>
+  <option value="D">D</option>
+  <option value="E">E</option>
+  <option value="F">F</option>
+  <option value="H">H</option>
+  <option value="I">I</option>
+</select>
+			</div>
+		</td>
+		<td>
+		<div id="mainselection">
+	<select name="col">
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+</select>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td><button type="submit" class="w3-button w3-block w3-red" value="insert">Send</button></td>
+	</tr>
+</form>
+  </table>
+   <!-- Footer -->
+  
+
+      
+  
+  <!-- End page content -->
+</div>
+
+<!-- Newsletter Modal -->
+<div id="newsletter" class="w3-modal">
+  <div class="w3-modal-content w3-animate-zoom" style="padding:32px">
+    <div class="w3-container w3-white w3-center">
+      <i onclick="document.getElementById('newsletter').style.display='none'" class="fa fa-remove w3-right w3-button w3-transparent w3-xxlarge"></i>
+      <h2 class="w3-wide">NEWSLETTER</h2>
+      <p>Join our mailing list to receive updates on new arrivals and special offers.</p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail"></p>
+      <button type="button" class="w3-button w3-padding-large w3-red w3-margin-bottom" onclick="document.getElementById('newsletter').style.display='none'">Subscribe</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// Accordion 
+function myAccFunc() {
+    var x = document.getElementById("demoAcc");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+
+// Click on the "Jeans" link on page load to open the accordion for demo purposes
+document.getElementById("myBtn").click();
+
+
+// Script to open and close sidebar
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+}
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+
+</body>
+</html>

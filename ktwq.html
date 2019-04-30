@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<style>
+*{
+box-sizing: border-box;
+}
+body {
+margin: 0;
+}
+.column_left {
+float: left;
+padding: 10px;
+height: 5px;
+width: 75%;
+}
+.vertical-menu{
+float:right;
+width: 25%;
+}
+.vertical-menu a{
+background-color: #eee;
+height:95px;
+color: blue;
+display: block;
+padding: 12px;
+text-decoration: none;
+font-family: 'Times New Roman', Times, serif;
+font-size: 90px;
+font-weight:bold;
+text-align: center;
+}
+.vertical-menu a:hover {
+background-color: #ccc;
+}
+.vertical-menu a.active {
+background-color: #4CAF50;
+color: white;
+}
+.column_left div {
+display:none;
+background-color:#aaa;
+margin: 0px 5px;
+}
+.column_left div p{
+font-style:italic;
+font-variant: normal;
+font-weight:normal;
+font-size:20px;
+text-align:center;
+line-height: 20px;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+</style>
+</head>
+<body>
+<script>
+function myFunction1() {
+var x = document.getElementById('myperinfo');
+if (x.style.display === 'none') {
+x.style.display = 'block';
+                    } else {
+x.style.display = 'none';
+                    }
+                }
+function myFunction2() {
+var y = document.getElementById('myeduinfo');
+if (y.style.display === 'none') {
+y.style.display = 'block';
+                    } else {
+y.style.display = 'none';
+                    }
+                }
+function myFunction3() {
+var z = document.getElementById('myinthob');
+if (z.style.display === 'none') {
+z.style.display = 'block';
+                    } else {
+z.style.display = 'none';
+                    }
+                }
+function myFunction4() {
+var a = document.getElementById('aboutme');
+if (a.style.display === 'none') 
+{
+a.style.display = 'block';
+                    } else{
+a.style.display = 'none';
+                    }
+                }
+function myFunction5() {
+var b = document.getElementById('achievements');
+if (b.style.display === 'none') {
+b.style.display = 'block';
+                    } else {
+b.style.display = 'none';
+                    }
+                }
+</script>
+<div><h1 style="text-align:center"><marquee>Welcome to the Curriculum Vitae Website</marquee></h1></div>
+<div class="row">
+<div class="column_left" style="background-color:#aaa;">
+<div id="ap" style="display:block;">
+<p style="text-align:'center'"><strong>Welcome to my CV</strong></p>
+</div>
+<div id="myperinfo">
+<p>Name:Akash<br>Surname:Sharma<br>Place of Birth:Patna<br>Address:324,L Block,MensHostel,VIT University,Vellore-632014<br>Date of Birth:24/4/1997<br>Nationality:Indian<br>E-mail:akash.2016@vitstudent.ac.in</p>
+</div>
+<div id="myeduinfo">
+<p>Matriculation:-Delhi Public School Patna(10 CGPA)<br>Intermediate:-Delhi Public School Patna(91.6%)<br>Graduation:-B.Tech(IT),VIT Vellore,Currently in 2nd Year</p>
+</div>
+<div id="myinthob">
+<p>I love to sing and listen to music.<br>I love to play games like cricket<br>I like to meet new people and explore new cultures</p>
+</div>
+<div id="aboutme">
+<p>I am an outgoing person.<br>I am a disciplined person and like to be punctual and follow the schedule properly.<br>I am also determined and when I put my mind into something I try to give my 100 percent.<br></p>
+</div>
+<div id="achievements">
+<p>HT Award for academic performance in class 10<br>Merit Scholarship in VITEEE-2016 of Rs 50000/annum</p>
+</div>
+</div>
+<div class= "vertical-menu">
+<a href="#" id="ap" class="active">Home</a>
+<a onclick="myFunction1()" href="javascript:void(0);">Personal Data</a>
+<a onclick="myFunction2()" href="javascript:void(0);">Education</a>
+<a onclick="myFunction3()" href="javascript:void(0);">Interests and hobbies</a>
+<a onclick="myFunction4()" href="javascript:void(0);">About Me</a>
+<a onclick="myFunction5()" href="javascript:void(0);">Achievements</a>
+</div>
+</body>
+</html>
